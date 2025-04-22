@@ -1,0 +1,3907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Viva La Noche Catering - Myrtle Beach's #1 Fastest Growing Catering Company offering sushi workshops and hibachi experiences">
+    <meta name="keywords" content="sushi, hibachi, catering, Myrtle Beach, Carolinas, sushi workshops, Viva La Noche">
+    <title>Viva La Noche Catering | Sushi & Hibachi Experiences</title>
+    <!-- Add premium fonts for more elegant typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- SwiperJS CSS -->
+    <style>
+        /* Global Styles - Enhanced Visual Design */
+        :root {
+            --primary: #e60000;
+            --primary-dark: #c50000;
+            --primary-light: #ff3333;
+            --dark: #0a0a0a;
+            --dark-accent: #121212;
+            --dark-card: #1a1a1a;
+            --light: #f5f5f5;
+            --light-accent: #e0e0e0;
+            --accent-gold: #d4af37;
+            --accent-gold-light: rgba(212, 175, 55, 0.1);
+            --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Elegant section dividers */
+        section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(230, 0, 0, 0.3), transparent);
+        }
+
+        /* Enhanced Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 3rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* Enhanced Button Styling */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 6px 12px rgba(230, 0, 0, 0.2);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.6s;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(230, 0, 0, 0.3);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Hero Section Enhancements */
+        .hero {
+            position: relative; /* Essential for positioning pseudo-elements */
+            min-height: 85vh; /* Reduce from 100vh to 85vh */
+            height: 85vh; /* Reduce from 100vh to 85vh */
+            padding-top: 110px;
+            overflow: hidden; /* Ensure this is set */
+        }
+
+        /* Add CSS for the video background */
+        .hero-background-video-container {
+            position: absolute;
+            top: 0 !important; /* Ensure this is not being overridden */
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Behind content */
+            transform: none !important; /* Remove any potential transforms */
+            overflow: visible !important; /* Ensure content is not being cropped */
+        }
+
+        .hero-background-video-container::after { /* New overlay */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+            z-index: 2; /* On top of video, behind content */
+        }
+
+        .hero-background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire area */
+            object-position: center center; /* Center the video vertically and horizontally */
+            transform: none !important; /* Remove any transforms on the video itself */
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px;
+            position: relative;
+            z-index: 3; /* Ensure content is above video and overlay */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertical centering */
+            align-items: center; /* Horizontal centering */
+            height: 100%; /* Make content container fill the parent hero section's height */
+            padding: 2rem; /* Add some padding for breathing room */
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s forwards 0.5s;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: var(--light);
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s forwards 0.8s;
+        }
+
+        .hero .btn {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s forwards 1.1s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 0;
+            transition: all 0.4s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-scrolled {
+            padding: 5px 0;
+            background-color: rgba(10, 10, 10, 0.98);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            min-height: 80px;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: var(--transition-smooth);
+        }
+
+        .logo img {
+            height: 80px;
+            vertical-align: middle;
+            display: block;
+            transition: var(--transition-smooth);
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        .nav-scrolled .logo img {
+            height: 70px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+            width: 70%;
+            margin-right: 150px; /* Increased from 70px */
+        }
+
+        .nav-links li {
+            margin: 0 5px;
+            position: relative;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            display: block;
+            padding: 10px 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition-smooth);
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-links a:hover::after {
+            width: 70%;
+        }
+
+        .mobile-menu {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            z-index: 20;
+        }
+
+        .mobile-menu div {
+            width: 25px;
+            height: 2px;
+            background-color: white;
+            margin: 6px;
+            transition: var(--transition-smooth);
+            border-radius: 2px;
+        }
+
+        .social-nav {
+            position: absolute;
+            right: 80px; /* Decreased from 120px to move icons further right */
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition-smooth);
+            opacity: 0.85;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-decoration: none; /* Remove underlines */
+        }
+        
+        .social-icon:hover {
+            color: var(--light);
+            opacity: 1;
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            text-decoration: none; /* Ensure no underlines on hover */
+        }
+
+        /* About Section Enhancements */
+        .about {
+            background-color: #0c0c0c;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80%;
+            height: 100%;
+            background: radial-gradient(circle at right top, rgba(230, 0, 0, 0.03), transparent 70%);
+            pointer-events: none;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-image {
+            flex: 1.2; /* Give image slightly more space */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(230, 0, 0, 0.3), transparent);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            z-index: 1;
+            mix-blend-mode: overlay;
+        }
+
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0) rotateX(0) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.07);
+        }
+
+        .about-image:hover::before {
+            opacity: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition-smooth);
+            filter: brightness(0.95) contrast(1.05);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+            filter: brightness(1.05) contrast(1.1);
+        }
+
+        .about-text {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            color: white;
+            text-align: left;
+            transform: none;
+            left: 0;
+            margin-bottom: 25px;
+        }
+
+        .about-text h2::after {
+            left: 0;
+            transform: none;
+        }
+
+        .about-text p {
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #0a0a0a;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #e60000;
+            margin-bottom: 50px;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid transparent;
+        }
+
+        .service-card:hover {
+            border-color: rgba(230, 0, 0, 0.3);
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-img img:hover {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        /* Why Try Section */
+        .why-try {
+            background-color: #121212;
+        }
+
+        .why-try h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #e60000;
+            margin-bottom: 50px;
+        }
+
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .reason-card {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(230, 0, 0, 0.1);
+        }
+
+        .reason-card i {
+            font-size: 3rem;
+            color: #e60000;
+            margin-bottom: 20px;
+        }
+
+        .reason-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Location Section */
+        .contact {
+            background-color: #121212;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            color: #e60000;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 0;
+            transition: all 0.4s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-scrolled {
+            padding: 5px 0;
+            background-color: rgba(10, 10, 10, 0.98);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            min-height: 80px;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: var(--transition-smooth);
+        }
+
+        .logo img {
+            height: 80px;
+            vertical-align: middle;
+            display: block;
+            transition: var(--transition-smooth);
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        .nav-scrolled .logo img {
+            height: 70px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+            width: 70%;
+            margin-right: 150px; /* Increased from 70px */
+        }
+
+        .nav-links li {
+            margin: 0 5px;
+            position: relative;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            display: block;
+            padding: 10px 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition-smooth);
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-links a:hover::after {
+            width: 70%;
+        }
+
+        .mobile-menu {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            z-index: 20;
+        }
+
+        .mobile-menu div {
+            width: 25px;
+            height: 2px;
+            background-color: white;
+            margin: 6px;
+            transition: var(--transition-smooth);
+            border-radius: 2px;
+        }
+
+        .social-nav {
+            position: absolute;
+            right: 80px; /* Decreased from 120px to move icons further right */
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition-smooth);
+            opacity: 0.85;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-decoration: none; /* Remove underlines */
+        }
+        
+        .social-icon:hover {
+            color: var(--light);
+            opacity: 1;
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            text-decoration: none; /* Ensure no underlines on hover */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #e60000;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff3333;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            /* General Mobile Adjustments */
+            body {
+                -webkit-text-size-adjust: 100%;
+            }
+
+            h1, h2, h3 {
+                letter-spacing: normal;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+                margin-bottom: 30px;
+            }
+
+            h2::after {
+                width: 60px;
+                bottom: -10px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            /* Mobile Navigation - Complete Rewrite */
+            .mobile-menu {
+                display: block;
+                right: 15px;
+                padding: 10px;
+                z-index: 1001;
+                background: none;
+                border: none;
+                outline: none;
+            }
+            
+            .mobile-menu div {
+                width: 28px;
+                height: 3px;
+                margin: 5px;
+                background-color: white;
+                transition: all 0.3s ease;
+            }
+            
+            /* Transform hamburger to X when active */
+            .mobile-menu.active .line1 {
+                transform: rotate(-45deg) translate(-6px, 6px);
+            }
+            
+            .mobile-menu.active .line2 {
+                opacity: 0;
+            }
+            
+            .mobile-menu.active .line3 {
+                transform: rotate(45deg) translate(-6px, -6px);
+            }
+            
+            /* Completely restyle the nav links for mobile */
+            .nav-container {
+                min-height: 70px;
+                padding: 0 15px;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .logo {
+                position: relative;
+                left: 0;
+                top: 0;
+                transform: none;
+                margin: 0;
+                height: 70px;
+                display: flex;
+                align-items: center;
+            }
+            
+            .logo img {
+                height: 50px;
+                margin: 5px 0;
+            }
+            
+            .nav-scrolled .logo img {
+                height: 45px;
+            }
+            
+            .social-nav {
+                position: static;
+                margin-right: 55px;
+                transform: none;
+                display: flex;
+                gap: 15px;
+            }
+            
+            .social-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+            
+            /* Completely restyle the nav links for mobile */
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                background-color: rgba(10, 10, 10, 0.95);
+                backdrop-filter: blur(10px);
+                z-index: 1000;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease;
+            }
+            
+            .nav-links.active {
+                max-height: 400px;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+                overflow-y: auto;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                margin: 0;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 15px 20px;
+                font-size: 17px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .nav-links a::after {
+                display: none;
+            }
+
+            /* Hero Section Mobile */
+            .hero {
+                padding-top: 70px;
+                height: auto;
+                min-height: 85vh;
+                background-attachment: scroll;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .hero-content {
+                padding: 40px 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+                line-height: 1.3;
+                margin-bottom: 20px;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+            }
+            
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                margin-top: 25px;
+            }
+            
+            .hero .btn {
+                width: 100%;
+                max-width: 300px;
+                margin-right: 0;
+                margin-bottom: 0;
+                padding: 16px 20px;
+                font-size: 15px;
+                text-align: center;
+            }
+
+            /* About Section Mobile */
+            .about-content {
+                flex-direction: column;
+                gap: 40px;
+                margin-top: 20px;
+            }
+            
+            .about-image {
+                transform: none;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                margin: 0 auto;
+                max-width: 100%;
+            }
+            
+            .about-text h2 {
+                font-size: 2rem;
+                text-align: center;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .about-text h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            /* Services/Workshops/Catering Section Mobile */
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                margin-top: 10px;
+            }
+            
+            .service-card {
+                max-width: 100%;
+                transform: none !important;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                margin: 0 auto;
+            }
+            
+            .service-card:hover {
+                transform: none !important;
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+            }
+            
+            .service-content {
+                padding: 25px 20px;
+            }
+            
+            .service-img {
+                height: 220px;
+            }
+            
+            .service-content h3 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+            }
+            
+            .service-content p {
+                margin-bottom: 25px;
+            }
+            
+            .service-content .btn {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            /* Brewery Partners Section Mobile - Completely Revised */
+            .brewery-partners-section {
+                padding: 50px 0 30px;
+                overflow: hidden;
+            }
+            
+            .brewery-partners-section h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+            
+            .section-intro p {
+                padding: 0 15px;
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            
+            .brewery-collage {
+                height: auto;
+                position: relative;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 20px 0;
+                margin: 30px 0 10px;
+                display: block;
+                width: 100%;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .brewery-logo {
+                position: static;
+                display: inline-block;
+                width: 120px;
+                height: 120px;
+                margin: 0 8px;
+                vertical-align: middle;
+                top: auto !important;
+                left: auto !important;
+                transform: none !important;
+                animation: none;
+                transition: all 0.3s ease;
+                background-color: rgba(255, 255, 255, 0.03);
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            
+            .brewery-logo:first-child {
+                margin-left: 15px;
+            }
+            
+            .brewery-logo:last-child {
+                margin-right: 15px;
+            }
+            
+            .brewery-logo:hover {
+                transform: scale(1.05) !important;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            }
+            
+            .brewery-logo img {
+                max-width: 85%;
+                max-height: 85%;
+                filter: brightness(1) contrast(1);
+            }
+            
+            /* Improve brewery scrollbar */
+            .brewery-collage::-webkit-scrollbar {
+                height: 6px;
+            }
+            
+            .brewery-collage::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 3px;
+            }
+            
+            .brewery-collage::-webkit-scrollbar-thumb {
+                background-color: var(--primary);
+                border-radius: 3px;
+            }
+
+            /* Contact Section Mobile */
+            .contact {
+                padding: 60px 0 40px;
+            }
+            
+            .contact h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+            
+            .contact-details p {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 10px;
+            }
+            
+            .contact .btn-container {
+                margin-top: 25px;
+            }
+            
+            .contact .btn {
+                width: 100%;
+                max-width: 300px;
+                padding: 16px 20px;
+                font-size: 15px;
+                text-align: center;
+            }
+
+            /* Footer Mobile */
+            footer {
+                padding: 40px 0 30px;
+            }
+            
+            .social-links a {
+                font-size: 1.3rem;
+                margin: 0 10px;
+            }
+            
+            .copyright {
+                font-size: 12px;
+                margin-top: 20px;
+            }
+
+            /* Modal Improvements */
+            .menu-content, .contact-content {
+                width: 95%;
+                max-width: 95%;
+                padding: 25px 15px;
+                margin: 5% auto;
+                max-height: 90vh;
+                border-radius: 8px;
+            }
+            
+            .menu-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .menu-header p {
+                font-size: 0.9rem;
+            }
+            
+            .close-menu, .close-contact {
+                right: 10px;
+                top: 10px;
+                font-size: 20px;
+                width: 32px;
+                height: 32px;
+            }
+            
+            .menu-section h3 {
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+            }
+            
+            .menu-item {
+                padding: 12px 8px;
+                margin-bottom: 15px;
+            }
+            
+            .menu-item-name {
+                font-size: 1.1rem;
+            }
+            
+            .menu-item-desc {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+            
+            .hibachi-name, .hibachi-price {
+                font-size: 1rem;
+            }
+            
+            /* Contact Form Mobile */
+            .form-group {
+                margin-bottom: 20px;
+            }
+            
+            .form-group label {
+                margin-bottom: 8px;
+                font-size: 0.9rem;
+            }
+            
+            .form-control {
+                padding: 12px;
+                font-size: 16px;
+            }
+            
+            textarea.form-control {
+                min-height: 100px;
+            }
+            
+            .submit-btn {
+                padding: 14px 0;
+                font-size: 16px;
+                width: 100%;
+            }
+        }
+
+        /* Additional breakpoint for very small screens if needed */
+        @media (max-width: 480px) {
+            h2 { font-size: 1.8rem; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .btn { padding: 14px 18px; font-size: 14px; }
+            .menu-content, .contact-content { padding: 20px 15px; }
+            .brewery-logo { width: 110px; height: 110px; margin: 0 5px; }
+        }
+
+        /* Add this for the sushi menu modal */
+        .menu-modal, .contact-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.95);
+            animation: fadeIn 0.3s;
+            backdrop-filter: blur(5px);
+        }
+
+        .menu-content {
+            background-color: #121212;
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 1000px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+            position: relative;
+            border: 1px solid rgba(230, 0, 0, 0.2);
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #e60000;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-menu:hover {
+            color: #ff3333;
+        }
+
+        .menu-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(230, 0, 0, 0.3);
+            padding-bottom: 20px;
+            position: relative;
+        }
+        
+        .menu-header::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; /* Adjusted from -8px to bring it even closer */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #e60000, transparent);
+        }
+
+        .menu-header h2 {
+            font-size: 2.5rem;
+            color: #e60000;
+            margin-bottom: 10px;
+            width: 100%;
+            display: block;
+            text-align: center;
+            left: 0;
+            transform: none;
+        }
+
+        .menu-header p {
+            color: #aaa;
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        .menu-section {
+            margin-bottom: 40px;
+        }
+
+        .menu-section h3 {
+            font-size: 1.8rem;
+            color: #e60000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(230, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            width: 100%;
+            display: block;
+            left: 0;
+            transform: none;
+        }
+        
+        .menu-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; /* Adjusted from -8px to bring it even closer */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: #e60000;
+        }
+
+        .menu-item {
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .menu-item:hover {
+            background-color: rgba(230, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .menu-item-name {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .menu-item-desc {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .special-note {
+            color: #e60000;
+            font-size: 0.9rem;
+            margin-left: 5px;
+        }
+
+        .menu-item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-content {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            .menu-item-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1200px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        /* Add these styles for the hibachi menu */
+        .hibachi-menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .hibachi-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dotted #333;
+        }
+        
+        .hibachi-name {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .hibachi-price {
+            color: #e60000;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        
+        .included-note {
+            background-color: rgba(230, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+        
+        .included-note p {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: #ccc;
+            margin: 0;
+        }
+        
+        .per-person, .kids-meals {
+            text-align: center;
+            margin: 15px 0;
+        }
+        
+        .per-person p {
+            font-weight: 700;
+            color: #e60000;
+            font-size: 1.1rem;
+        }
+        
+        .kids-meals p {
+            font-style: italic;
+            color: #ccc;
+        }
+        
+        .addons-note {
+            font-size: 0.8rem;
+            font-style: italic;
+            color: #aaa;
+            margin-left: 10px;
+            display: block;
+        }
+        
+        @media (min-width: 768px) {
+            .hibachi-menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .addons-note {
+                display: inline;
+            }
+        }
+
+        /* Add these styles for social media and contact form */
+        .social-nav {
+            position: absolute;
+            right: 80px; /* Decreased from 120px to move icons further right */
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-icon {
+            color: #ffffff;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: #e60000;
+        }
+        
+        .contact-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s;
+        }
+        
+        .contact-content {
+            background-color: #121212;
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 12px;
+            width: 50%;
+            max-width: 600px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+            position: relative;
+            border: 1px solid rgba(230, 0, 0, 0.2);
+            animation: fadeIn 0.4s ease-out;
+        }
+        
+        .close-contact {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #e60000;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgba(230, 0, 0, 0.1);
+        }
+        
+        .close-contact:hover {
+            color: #ff3333;
+            transform: rotate(90deg);
+            background-color: rgba(230, 0, 0, 0.2);
+        }
+        
+        .contact-form {
+            margin-top: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #f5f5f5;
+            font-size: 1rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background-color: rgba(26, 26, 26, 0.7);
+            color: #f5f5f5;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #e60000;
+            background-color: rgba(26, 26, 26, 0.9);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 5px rgba(230, 0, 0, 0.3);
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            padding: 12px 30px;
+            background-color: #e60000;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 10px auto 0;
+            min-width: 200px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-btn:hover {
+            background-color: #ff3333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+            z-index: 1;
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-content {
+                width: 90%;
+                padding: 20px;
+            }
+            
+            .social-nav {
+                position: static;
+                justify-content: center;
+                margin: 10px 0;
+                transform: none;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                padding-top: 10px;
+            }
+            
+            .logo {
+                position: static;
+                transform: none;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Partner logos styles */
+        .partners-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            justify-items: center;
+        }
+        
+        .partner-logo {
+            background-color: rgba(255, 255, 255, 0.05);
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+        
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            filter: grayscale(0.5);
+            transition: filter 0.3s ease;
+        }
+        
+        .partner-logo:hover img {
+            filter: grayscale(0);
+        }
+        
+        .section-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        /* Partner logos carousel styles */
+        .partners-section {
+            padding: 60px 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .partners-carousel {
+            position: relative;
+            padding: 40px 0;
+            margin-top: 30px;
+        }
+        
+        .partners-track {
+            display: flex;
+            width: 200%;
+            animation: carousel 30s linear infinite;
+        }
+        
+        .partners-track:hover {
+            animation-play-state: paused;
+        }
+        
+        @keyframes carousel {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .partner-logo {
+            background-color: rgba(255, 255, 255, 0.05);
+            width: 280px;
+            height: 280px;
+            margin: 0 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            padding: 30px;
+            flex-shrink: 0;
+        }
+        
+        .partner-logo:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            filter: grayscale(0.5);
+            transition: filter 0.3s ease;
+        }
+        
+        .partner-logo:hover img {
+            filter: grayscale(0);
+        }
+        
+        .section-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        /* Add visual enhancements */
+        h2 {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #e60000;
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(230, 0, 0, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(230, 0, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(230, 0, 0, 0);
+            }
+        }
+        
+        .cta-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: -1;
+        }
+
+        h2 {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        
+        .contact h2, .partners-section h2 {
+            width: 100%;
+            display: block;
+            text-align: center;
+            left: 0;
+            transform: none;
+        }
+
+        /* Image noise reduction */
+        .sushi-catering-img {
+            filter: brightness(0.95) contrast(0.95) blur(0.5px);
+            transition: all 0.3s ease;
+        }
+        
+        .sushi-catering-img:hover {
+            filter: brightness(1) contrast(1) blur(0);
+        }
+
+        /* Add these styles for the success message */
+        .form-success-message {
+            display: none;
+            background-color: rgba(0, 180, 0, 0.1);
+            border: 1px solid rgba(0, 180, 0, 0.3);
+            color: #00b400;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-error-message {
+            display: none;
+            background-color: rgba(180, 0, 0, 0.1);
+            border: 1px solid rgba(180, 0, 0, 0.3);
+            color: #ff3333;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Animations and Effects */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -100% 0; }
+            100% { background-position: 100% 0; }
+        }
+        
+        /* Particles background */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        /* Floating elements */
+        .float-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .float-element-slow {
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .float-element-fast {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        /* Animated service cards */
+        .service-card {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(230, 0, 0, 0.1) 0%, rgba(230, 0, 0, 0) 100%);
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-20px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(230, 0, 0, 0.3);
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        
+        /* Text glow effect */
+        .text-glow {
+            text-shadow: 0 0 10px rgba(230, 0, 0, 0.5), 0 0 20px rgba(230, 0, 0, 0.3), 0 0 30px rgba(230, 0, 0, 0.1);
+        }
+        
+        /* Gradient text effect */
+        .gradient-text {
+            background: linear-gradient(45deg, #ff3333, #e60000, #ff3333);
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
+            display: inline-block; /* Ensure gradient applies properly */
+            width: 100%; /* Full width for proper centering */
+            text-align: center; /* Ensure text is centered */
+        }
+        
+        /* Animated count numbers */
+        .count-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #e60000;
+        }
+        
+        /* Custom cursor */
+        .custom-cursor {
+            cursor: none;
+        }
+        
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgba(230, 0, 0, 0.5);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        
+        .cursor-follower {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(230, 0, 0, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.3s ease;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        
+        /* Interactive background elements */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, rgba(230, 0, 0, 0.1), transparent);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        /* Loading animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0a0a0a;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .loading-logo-container {
+            width: 180px; /* Larger container */
+            height: 180px; /* Larger container */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 2s ease-in-out infinite;
+        }
+        
+        .loading-logo-main {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(230, 0, 0, 0.5));
+        }
+        
+        /* Stats section */
+        .stats-section {
+            padding: 80px 0;
+            background-color: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            flex-basis: 250px;
+            margin: 20px;
+            background-color: rgba(26, 26, 26, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, transparent, rgba(230, 0, 0, 0.2), transparent);
+            transition: 0.5s;
+            transform: rotate(45deg);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .stat-item:hover::before {
+            top: 100%;
+            left: 100%;
+        }
+        
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #e60000;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+        
+        /* 3D hover effect for menu items */
+        .menu-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px) rotateX(5deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Cursor styles */
+        .cursor {
+            display: none !important; /* Hide cursor completely */
+        }
+
+        .cursor-follower {
+            display: none !important; /* Hide cursor follower completely */
+        }
+
+        /* Remove underlines from menu links */
+        .menu-content a {
+            text-decoration: none;
+        }
+
+        /* Override any hover effects that might add underlines */
+        .menu-content a:hover {
+            text-decoration: none;
+        }
+
+        /* Fix brewery partners section and restore to original style */
+        .brewery-partners-section {
+            padding: 80px 0 40px; /* Reduced bottom padding from 80px to 40px */
+            text-align: center;
+            position: relative;
+            background-color: #0a0a0a;
+            overflow: hidden;
+            width: 100%;
+            /* Subtle radial gradient background */
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(230, 0, 0, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(230, 0, 0, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(230, 0, 0, 0.02) 0%, transparent 40%);
+        }
+
+        /* Add subtle beer bubbles animation */
+        .brewery-partners-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 2px);
+            background-size: 30px 30px;
+            background-position: 0 0;
+            animation: brewBubbles 120s linear infinite;
+            opacity: 0.5; /* Increased from 0.3 to make bubbles more visible */
+            pointer-events: none;
+        }
+
+        @keyframes brewBubbles {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100%); }
+        }
+
+        /* Enhanced section title */
+        .brewery-partners-section h2.gradient-text {
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .brewery-partners-section .container {
+            max-width: 100%;
+            width: 100%;
+            padding: 0;
+        }
+
+        /* Create collage container */
+        .brewery-collage {
+            position: relative;
+            width: 100%;
+            max-width: 2200px; /* Reduced from 2400px for smaller logos */
+            height: 1300px; /* Increased from 1000px */
+            margin: 60px auto;
+            padding: 0 20px;
+            overflow: visible;
+        }
+
+        /* Style for individual brewery logos - remove background boxes and fix positioning */
+        .brewery-logo {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease;
+            overflow: visible;
+            z-index: 1; /* Base z-index */
+            --rotation: 0deg;
+            animation: floatAnimation 6s infinite ease-in-out;
+            animation-delay: calc(var(--index) * 0.3s);
+            width: 280px; /* Further reduced for better spacing */
+            height: 280px; /* Further reduced for better spacing */
+            background: transparent; /* Remove the background boxes */
+            border-radius: 8px;
+            box-shadow: none; /* Remove the box shadow */
+        }
+
+        .brewery-logo img {
+            max-width: 85%;
+            max-height: 85%;
+            object-fit: contain;
+            transition: all 0.5s ease;
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        /* Add shine effects to brewery logos */
+        .brewery-logo::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            pointer-events: none;
+        }
+
+        /* Hover effects - simplified for better performance */
+        .brewery-logo:hover {
+            transform: translateY(-10px) scale(1.05) rotate(0deg) !important;
+            z-index: 100 !important; /* Higher z-index on hover only */
+            animation-play-state: paused; /* Pause floating animation on hover */
+        }
+
+        /* Fix font consistency in hero section */
+        .hero h1, .hero h1 .accent {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .accent {
+            color: var(--primary);
+        }
+        
+        /* Performance optimizations */
+        .hero-glow {
+            filter: blur(30px); /* Reduce blur radius */
+            opacity: 0.5; /* Reduce opacity for better performance */
+        }
+        
+        /* Reduce animation complexity */
+        @keyframes pulse-glow {
+            0% { opacity: 0.3; transform: scale(0.95); }
+            100% { opacity: 0.4; transform: scale(1.05); }
+        }
+        
+        /* Improve layout to prevent overlapping */
+        /* Row 1 - Top row with even spacing */
+        .brewery-logo:nth-child(1)  { top: 20px;  left: 2%;    transform: rotate(-3deg); z-index: 5;  --rotation: -3deg; --index: 1; } /* Athentic */
+        .brewery-logo:nth-child(2)  { top: 15px;  left: 18%;   transform: rotate(2deg);  z-index: 4;  --rotation: 2deg;  --index: 2; }
+        .brewery-logo:nth-child(3)  { top: 25px;  left: 34%;   transform: rotate(-2deg); z-index: 3;  --rotation: -2deg; --index: 3; }
+        .brewery-logo:nth-child(4)  { top: 18px;  left: 50%;   transform: rotate(1deg);  z-index: 2;  --rotation: 1deg;  --index: 4; }
+        .brewery-logo:nth-child(5)  { top: 28px;  left: 66%;   transform: rotate(-1deg); z-index: 3;  --rotation: -1deg; --index: 5; }
+        .brewery-logo:nth-child(6)  { top: 20px;  left: 82%;   transform: rotate(3deg);  z-index: 2;  --rotation: 3deg;  --index: 6; }
+
+        /* Row 2 - Middle row with alternating positions */
+        .brewery-logo:nth-child(7)  { top: 330px; left: 2%;    transform: rotate(-2deg); z-index: 2;  --rotation: -2deg; --index: 7; }
+        .brewery-logo:nth-child(8)  { top: 320px; left: 18%;   transform: rotate(2deg);  z-index: 3;  --rotation: 2deg;  --index: 8; }
+        .brewery-logo:nth-child(9)  { top: 340px; left: 34%;   transform: rotate(-1deg); z-index: 4;  --rotation: -1deg; --index: 9; }
+        .brewery-logo:nth-child(10) { top: 330px; left: 50%;   transform: rotate(1deg);  z-index: 5;  --rotation: 1deg;  --index: 10; }
+        .brewery-logo:nth-child(11) { top: 350px; left: 66%;   transform: rotate(-2deg); z-index: 3;  --rotation: -2deg; --index: 11; }
+        .brewery-logo:nth-child(12) { top: 335px; left: 82%;   transform: rotate(2deg);  z-index: 2;  --rotation: 2deg;  --index: 12; }
+
+        /* Row 3 - Bottom row with sufficient spacing */
+        .brewery-logo:nth-child(13) { top: 640px; left: 2%;    transform: rotate(-1deg); z-index: 4;  --rotation: -1deg; --index: 13; }
+        .brewery-logo:nth-child(14) { top: 650px; left: 18%;   transform: rotate(1deg);  z-index: 3;  --rotation: 1deg;  --index: 14; }
+        .brewery-logo:nth-child(15) { top: 660px; left: 34%;   transform: rotate(-2deg); z-index: 2;  --rotation: -2deg; --index: 15; }
+        .brewery-logo:nth-child(16) { top: 645px; left: 50%;   transform: rotate(3deg);  z-index: 4;  --rotation: 3deg;  --index: 16; }
+        .brewery-logo:nth-child(17) { top: 655px; left: 66%;   transform: rotate(-1deg); z-index: 3;  --rotation: -1deg; --index: 17; }
+        .brewery-logo:nth-child(18) { top: 640px; left: 82%;   transform: rotate(2deg);  z-index: 2;  --rotation: 2deg;  --index: 18; }
+
+        /* Row 4 - Now a full row of 6 */
+        .brewery-logo:nth-child(19) { top: 950px; left: 2%;    transform: rotate(-3deg); z-index: 3;  --rotation: -3deg; --index: 19; }
+        .brewery-logo:nth-child(20) { top: 960px; left: 18%;   transform: rotate(1deg);  z-index: 4;  --rotation: 1deg;  --index: 20; }
+        .brewery-logo:nth-child(21) { top: 970px; left: 34%;   transform: rotate(-2deg); z-index: 5;  --rotation: -2deg; --index: 21; } /* By the Beach */
+        .brewery-logo:nth-child(22) { top: 955px; left: 50%;   transform: rotate(2deg);  z-index: 3;  --rotation: 2deg;  --index: 22; } /* 6s */
+        .brewery-logo:nth-child(23) { top: 965px; left: 66%;   transform: rotate(-1deg); z-index: 4;  --rotation: -1deg; --index: 23; } /* Old Mill */
+        .brewery-logo:nth-child(24) { top: 950px; left: 82%;   transform: rotate(3deg);  z-index: 2;  --rotation: 3deg;  --index: 24; } /* Palmetto */
+
+        /* Better floating animation */
+        @keyframes floatAnimation {
+            0% { transform: translateY(0) rotate(var(--rotation)); }
+            50% { transform: translateY(-8px) rotate(var(--rotation)); }
+            100% { transform: translateY(0) rotate(var(--rotation)); }
+        }
+
+        @media (max-width: 1600px) {
+            .brewery-collage {
+                max-width: 1400px;
+                height: 1250px; /* Increased from 1200px */
+            }
+            
+            .brewery-logo {
+                width: 260px; /* Slightly smaller on medium screens */
+                height: 260px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .brewery-logo {
+                width: 240px;
+                height: 240px;
+            }
+            
+            .brewery-collage {
+                max-width: 1000px;
+                height: 1300px; /* Adjusted height */
+            }
+            
+            /* Adjusted row spacing for smaller screens */
+            .brewery-logo:nth-child(13),
+            .brewery-logo:nth-child(14),
+            .brewery-logo:nth-child(15),
+            .brewery-logo:nth-child(16),
+            .brewery-logo:nth-child(17),
+            .brewery-logo:nth-child(18) { top: 620px; }
+            
+            .brewery-logo:nth-child(19),
+            .brewery-logo:nth-child(20),
+            .brewery-logo:nth-child(21),
+            .brewery-logo:nth-child(22),
+            .brewery-logo:nth-child(23),
+            .brewery-logo:nth-child(24) { top: 900px; }
+        }
+
+        @media (max-width: 768px) {
+            .brewery-logo {
+                width: 160px; /* Slightly smaller for better horizontal fit */
+                height: 160px;
+                display: inline-block; /* Change from flex/block for horizontal scroll */
+                position: relative; /* Keep relative for potential transforms/animations */
+                margin: 0 10px; /* Horizontal spacing */
+                vertical-align: middle; /* Align logos vertically */
+            }
+            
+            .brewery-collage {
+                max-width: 100%; /* Use full width */
+                height: 220px; /* Set height for the scrolling container */
+                display: block; /* Change from flex */
+                overflow-x: auto; /* Enable horizontal scroll */
+                overflow-y: hidden; /* Hide vertical scrollbar */
+                white-space: nowrap; /* Keep items in one line */
+                margin: 30px 0; /* Adjust margin */
+                padding: 20px 0; /* Add padding for visual spacing */
+                text-align: left; /* Align logos to the left */
+                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            }
+
+            /* Optional: Style scrollbar for webkit browsers */
+            .brewery-collage::-webkit-scrollbar {
+                height: 8px;
+            }
+            .brewery-collage::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 4px;
+            }
+            .brewery-collage::-webkit-scrollbar-thumb {
+                background-color: var(--primary);
+                border-radius: 4px;
+            }
+            .brewery-collage::-webkit-scrollbar-thumb:hover {
+                background-color: var(--primary-light);
+            }
+            
+            /* Remove the stacking behavior */
+            .brewery-logo {
+                /* Remove absolute positioning overrides if any were previously added for mobile */
+                top: auto !important;
+                left: auto !important;
+            }
+            
+            @keyframes floatMobileAnimation {
+                0% { transform: translateY(0) rotate(var(--rotation)); }
+                50% { transform: translateY(-5px) rotate(var(--rotation)); }
+                100% { transform: translateY(0) rotate(var(--rotation)); }
+            }
+        }
+
+        /* Button container for better spacing */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Primary and secondary button variations */
+        .primary-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 6px 12px rgba(230, 0, 0, 0.3);
+        }
+        
+        .secondary-btn {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--primary);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .secondary-btn:hover {
+            background: rgba(230, 0, 0, 0.1);
+            border-color: var(--primary-light);
+        }
+
+        /* Define Ken Burns animation */
+        @keyframes kenburns {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.04); /* Less noticeable zoom for a more subtle effect */
+            }
+        }
+
+        /* --- Testimonials Section Styles --- */
+        #testimonials {
+            padding: 80px 0; /* Consistent padding */
+            background-color: var(--dark-accent); /* Use theme variable */
+            text-align: center;
+            position: relative; /* Needed for pseudo-elements if added later */
+            overflow: hidden; /* Prevent overflow issues */
+        }
+
+        /* Ensure the h2 is centered even if text-align on parent fails */
+        #testimonials h2 {
+            display: block; /* Changed from inline-block */
+            width: fit-content; /* Size to content */
+            margin-left: auto; /* Center horizontally */
+            margin-right: auto; /* Center horizontally */
+            margin-bottom: 60px; /* Keep existing margin */
+            position: relative; /* Keep for ::after */
+            left: auto; /* Override inherited left */
+            transform: none; /* Override inherited transform */
+        }
+
+        #testimonials h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent); /* Match underline */
+            border-radius: 3px;
+        }
+
+        /* Remove old grid styles */
+        /* .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; 
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 20px; 
+            text-align: left;
+        } */
+
+        .testimonials-swiper { /* Style the swiper container */
+            max-width: 1200px; /* Match container width */
+            margin: 0 auto;
+            padding: 0 20px 50px; /* Add bottom padding for pagination */
+            position: relative; /* Needed for absolute positioning of buttons */
+            overflow: hidden; /* Hide overflowing slides */
+        }
+
+        .testimonial-card {
+            background-color: var(--dark-card); /* Use theme variable */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Darker shadow */
+            border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle dark border */
+            border-top: 3px solid rgba(255, 255, 255, 0.1); /* Added top border */
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--light); /* Use theme variable */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+            min-height: 280px; /* Adjusted min-height slightly for border */
+            height: auto; /* Allow cards to grow naturally */
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px); /* Slightly more lift */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Stronger hover shadow */
+        }
+
+        .testimonial-card h3 {
+            font-family: 'Montserrat', sans-serif; /* Match body/name font */
+            font-weight: 600; /* Make name slightly bolder */
+            font-size: 1.2rem; /* Slightly larger name */
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: white; /* Ensure white color */
+        }
+
+        .rating {
+            color: var(--accent-gold); /* Use theme variable for stars */
+            font-size: 1rem;
+            margin-bottom: 15px; /* Increased space below stars */
+        }
+
+        .rating i {
+            margin-right: 3px; /* Space between star icons */
+        }
+
+        .testimonial-card p {
+            font-family: 'Montserrat', sans-serif; /* Match body font */
+            font-size: 1rem; /* Slightly larger text */
+            color: var(--light-accent); /* Use theme variable */
+            flex-grow: 1;
+            margin-bottom: 20px; /* Increased space below text */
+            line-height: 1.7; /* Improved line spacing */
+        }
+
+        .platform-icon {
+            margin-top: auto;
+            line-height: 0;
+            text-align: right; /* Align icon to the right */
+        }
+
+        .platform-icon i {
+            font-size: 1.4rem; /* Larger icon */
+            color: var(--primary); /* Use primary color for icon */
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .testimonial-card:hover .platform-icon i {
+            opacity: 1;
+        }
+
+        /* Swiper Navigation & Pagination Styles */
+        .testimonials-swiper .swiper-button-next,
+        .testimonials-swiper .swiper-button-prev {
+            color: var(--primary); /* Use primary color */
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .testimonials-swiper .swiper-button-next:hover,
+        .testimonials-swiper .swiper-button-prev:hover {
+            opacity: 1;
+        }
+
+        .testimonials-swiper .swiper-button-next::after,
+        .testimonials-swiper .swiper-button-prev::after {
+            font-size: 1.5rem; /* Adjust arrow size */
+            font-weight: bold;
+        }
+        
+        .testimonials-swiper .swiper-pagination {
+            bottom: 10px; /* Position pagination */
+        }
+
+        .testimonials-swiper .swiper-pagination-bullet {
+            background-color: rgba(255, 255, 255, 0.3); /* Inactive bullet color */
+            opacity: 1;
+            width: 10px; /* Slightly larger bullets */
+            height: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .testimonials-swiper .swiper-pagination-bullet-active {
+            background-color: var(--primary); /* Active bullet color */
+        }
+
+        /* Ensure swiper-slide class doesn't conflict */
+        .swiper-slide {
+            height: auto; /* Ensure slides adapt to content height */
+        }
+        /* --- End Testimonials Section Styles --- */
+
+        /* --- CSS for Reviewer Photos --- */
+        .reviewer-photo {
+          width: 50px; /* Adjust size as needed */
+          height: 50px; /* Adjust size as needed */
+          border-radius: 50%; /* Make it circular */
+          object-fit: cover; /* Ensure image covers the area well */
+          display: block; /* Allow margins to work for centering */
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 1rem; /* Space below the image */
+          border: 2px solid #eee; /* Optional subtle border */
+        }
+
+        /* --- CSS for Reviewer Initial Icons --- */
+        .reviewer-initial-icon {
+          width: 50px;           /* Match photo size */
+          height: 50px;          /* Match photo size */
+          border-radius: 50%;    /* Make it circular */
+          background-color: var(--primary); /* Use primary color for background */
+          color: white;          /* White initial */
+          display: flex;         /* Use flexbox for centering */
+          align-items: center;   /* Center vertically */
+          justify-content: center; /* Center horizontally */
+          font-size: 1.5rem;     /* Size of the initial */
+          font-weight: 600;      /* Make initial bold */
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 1rem;   /* Space below the icon */
+          border: 2px solid #eee; /* Optional border */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo"><img src="images/IMG_6382.png" alt="Viva La Noche Logo"></a>
+            <div class="social-nav">
+                <a href="https://www.facebook.com/vivalanocheshop/?locale=es_LA" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vivalanoche___/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#catering">Catering</a></li>
+                <li><a href="#workshops">Workshops</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <!-- Replace static image divs with video background -->
+        <div class="hero-background-video-container">
+            <video loop muted autoplay playsinline poster="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" class="hero-background-video">
+                <source src="images/video/header vid.mp4" type="video/mp4">
+                <!-- Optional: Add WebM for broader browser support -->
+                <!-- <source src="images/video/header_vid.webm" type="video/webm"> -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+            
+        <!-- Add dynamic glow elements - These might need CSS adjustment if they relied on old structure -->
+        <div class="hero-glow"></div>
+        <div class="hero-glow"></div>
+        
+        <!-- Content with higher z-index -->
+        <div class="hero-content"> <!-- Removed inline style, z-index handled in CSS -->
+            <h1 class="text-glow">Elevated Experiences:<br>Private Chefs for<br><span class="accent">Sushi & Hibachi</span></h1>
+            <p>The #1 fastest-growing catering company in the Southeast, serving the Carolinas with world-class catering and incredible events.</p>
+            <div class="btn-container">
+                <a href="#catering" class="btn">Explore Catering Options</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about us/FoodKitchen-25.jpg" alt="Viva La Noche Chef Preparing Food">
+                </div>
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>Viva La Noche, a company of skilled chefs founded in 2024, delivers exceptional culinary experiences tailored to your specific needs. We pride ourselves on creating engaging events, from hands-on sushi workshops that allow guests to participate in the culinary process to luxurious on-site hibachi presentations.</p>
+                    <p>Beyond these interactive options, we offer a full spectrum of catering services, all characterized by fresh ingredients, meticulous preparation, and a commitment to providing outstanding value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering Section -->
+    <section id="catering" class="services" style="background-color: #121212;">
+        <div class="container">
+            <h2>Elevate Your Event with Exquisite Catering</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">From intimate gatherings to large-scale events across the Carolinas, Viva La Noche delivers exceptional catering services. Our focus on fresh ingredients and expert preparation ensures a memorable culinary experience for you and your guests.</p>
+            <div class="services-container">
+                <div class="service-card scroll-reveal">
+                    <div class="service-img">
+                        <img src="images/sushi catering/DSC01934.remini-enhanced.jpg" alt="Sushi Catering" class="sushi-catering-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Sushi Catering</h3>
+                        <p>Impress your guests with beautifully crafted and incredibly fresh sushi platters. Perfect for corporate events, parties, and any occasion where you want to offer a sophisticated and delicious culinary experience.</p>
+                        <a href="#" class="btn menu-btn">View Menu</a>
+                    </div>
+                </div>
+                <div class="service-card scroll-reveal">
+                    <div class="service-img">
+                        <img src="images/hibachi catering/Gringo Ninja Final.00_01_25_00.Still003.remini-enhanced.jpg" alt="Hibachi Catering">
+                    </div>
+                    <div class="service-content">
+                        <h3>On-Site Hibachi</h3>
+                        <p>Bring the excitement and flavor of a hibachi grill directly to your event! Our skilled chefs will create a dynamic and entertaining dining experience for your guests, cooking delicious hibachi dishes fresh on-site.</p>
+                        <a href="#" class="btn hibachi-btn">View Menu</a>
+                    </div>
+                </div>
+                <div class="service-card scroll-reveal">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Weddings">
+                    </div>
+                    <div class="service-content">
+                        <h3>Weddings</h3>
+                        <p>Make your special day unforgettable with our exquisite sushi and dynamic hibachi catering. We specialize in creating unique and memorable culinary experiences tailored perfectly for weddings.</p>
+                        <a href="#" class="btn contact-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section id="workshops" class="services">
+        <div class="container">
+            <h2>Learn to Roll!</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Discover the art of sushi making with our fun and interactive workshops! Whether you're a complete beginner or looking to refine your skills, our expert-led sessions provide a hands-on experience you won't forget.</p>
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Public Sushi Workshop">
+                    </div>
+                    <div class="service-content">
+                        <h3>Join a Workshop</h3>
+                        <p>Immerse yourself in a fun and social culinary adventure! Our scheduled workshops offer a fantastic opportunity to learn the art of sushi making alongside fellow enthusiasts. Guided by our expert instructors, you'll gain hands-on experience with essential techniques and enjoy creating (and eating!) delicious sushi rolls.</p>
+                        <div class="btn-container">
+                            <a href="https://www.eventbrite.com/o/viva-la-noche-90070902523" class="btn">View Schedule</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Private Sushi Workshop">
+                    </div>
+                    <div class="service-content">
+                        <h3>Host Your Own</h3>
+                        <p>Looking for a unique team-building activity, birthday celebration, or private gathering? We offer customized private sushi workshops tailored to your needs, venue, and group size.</p>
+                        <a href="#" class="btn">Request Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brewery Partners Section -->
+    <section class="brewery-partners-section">
+        <div class="container">
+            <h2 class="gradient-text">Our Brewery Partners</h2>
+            <div class="section-intro">
+                <p>We're thrilled to collaborate with these fantastic breweries across the Carolinas to bring our unique sushi workshops to exciting new locations! Join us at these partner breweries for a fun, hands-on experience where you'll learn to craft delicious sushi and enjoy how perfectly it pairs with their exceptional craft beers. Check our schedule for upcoming brewery workshop dates!</p>
+            </div>
+            
+            <!-- Replace grid with collage layout -->
+            <div class="brewery-collage">
+                <!-- Brewery Logos -->
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Athentic Brewing Logo.png" alt="Athentic Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Athentic+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Bull City Ciderworks Logo.webp" alt="Bull City Ciderworks" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Bull+City+Ciderworks'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Edit Beer Logo.png" alt="Edit Beer" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Edit+Beer'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Hi-Wire Brewing Logo.png" alt="Hi-Wire Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Hi-Wire+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Magnetic South Brewery Logo.png" alt="Magnetic South Brewery" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Magnetic+South'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/New Groove Artisan Brewery Logo.png" alt="New Groove Artisan Brewery" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=New+Groove'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Panzu Brewery Logo.jpg" alt="Panzu Brewery" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Panzu+Brewery'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Pilot Brewing Logo.png" alt="Pilot Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Pilot+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Thomas Creek Brewery Logo.webp" alt="Thomas Creek Brewery" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Thomas+Creek'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Vicious Fishes Brewery Logo.png" alt="Vicious Fishes Brewery" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Vicious+Fishes'">
+                </div>
+                <!-- Add updated names for existing logos -->
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Armored Cow Brewing Logo.jpg" alt="Armored Cow Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Armored+Cow+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Cabarrus Brewing Logo.png" alt="Cabarrus Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Cabarrus+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Carolina Bauernhaus Logo.png" alt="Carolina Bauernhaus" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Carolina+Bauernhaus'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Foothills Brewing Logo.png" alt="Foothills Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Foothills+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Leland Brewing Logo.png" alt="Leland Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Leland+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Outer Dunes Brewing Co. Logo.png" alt="Outer Dunes Brewing Co." 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Outer+Dunes+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Sidetracked Brewery Logo.png" alt="Sidetracked Brewery" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Sidetracked+Brewery'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Sandpiper Brewing Co. Logo.png" alt="Sandpiper Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Sandpiper+Brewing'">
+                </div>
+                <!-- Add the three new brewery logos -->
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Makai Brewing Logo.png" alt="Makai Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Makai+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Fortnight Brewing Co Logo.png" alt="Fortnight Brewing Co." 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Fortnight+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/By the Beach Brewing Logo.png" alt="By the Beach Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=By+the+Beach+Brewing'">
+                </div>
+                <!-- Add the three new brewery logos -->
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/6S Logo.jpg" alt="6s Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=6s+Brewing'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Old Mill Logo.png" alt="Old Mill Brewery" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Old+Mill+Brewery'">
+                </div>
+                <div class="brewery-logo">
+                    <img src="images/brewery logos/Palmetto Brewing Logo.png" alt="Palmetto Brewing" 
+                         onerror="this.src='https://placehold.co/300x300/222/e60000?text=Palmetto+Brewing'">
+                </div>
+            </div> <!-- End of brewery-collage -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <!-- Swiper Container -->
+            <div class="swiper-container testimonials-swiper"> <!-- Renamed grid class -->
+                <div class="swiper-wrapper">
+                    <!-- Testimonial Cards become Swiper Slides -->
+                    <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
+                        <img src="images/review pics/Colin Stringer.png" alt="Reviewer: Colin Stringer" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <h3>Colin Stringer</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>Thank you Chef Sherwin! We had a great night and learned a lot! We also were taught how to make a traditional Japanese onigiri. We'll definitely join another class in the future. Thanks for such a great class!</p>
+                        <div class="platform-icon">
+                            <i class="fas fa-star"></i> <!-- Using star for Trustpilot -->
+                        </div>
+                    </a>
+
+                    <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
+                        <img src="images/review pics/Katilyn Lemmons.png" alt="Reviewer: Katilyn Lemmons" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <h3>Katilyn Lemmons</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>Really cool class!! Fun and good crowd interaction. The host chef was hilarious</p>
+                        <div class="platform-icon">
+                             <i class="fas fa-star"></i> <!-- Using star for Trustpilot -->
+                        </div>
+                    </a>
+
+                    <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
+                        <div class="reviewer-initial-icon">S</div>
+                        <h3>Shay</h3>
+                         <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>Wonderful valentines days night! Chef was funny and interactive. The food was delicious. Lots of options. My only tip would be to add mashed sweet potato to the buffet.</p>
+                        <div class="platform-icon">
+                             <i class="fas fa-star"></i> <!-- Using star for Trustpilot -->
+                        </div>
+                    </a>
+
+                    <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
+                        <img src="images/review pics/Cyndie Sanders Rhodes.png" alt="Reviewer: Cyndie Sanders Rhodes" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <h3>Cyndie Sanders Rhodes</h3>
+                         <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>Fabulous experience!! My husband and daughter got tickets for all of us to attend the sushi class for my birthday and it was so much fun!! We learned a lot, ate all the sushi we could hold, made new friends, and had a great time. The event was at New Groove Brewery in Boiling Springs, so the beer was amazing as well. Don't think twice - just go! You will be glad you did. Highly recommend!</p>
+                        <div class="platform-icon">
+                             <i class="fas fa-star"></i> <!-- Using star for Trustpilot -->
+                        </div>
+                    </a>
+
+                    <a href="https://www.facebook.com/vivalanocheshop/" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
+                        <img src="images/review pics/Gissel Ramirez.jpg" alt="Reviewer: Gissel Ramirez" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <h3>Gissel Ramirez</h3>
+                         <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>My husband and I went very spontaneous and fun, instructor was amazing and made it such a fun vibe, met great people and enjoyed making our own sushi. All you can eat !</p>
+                        <div class="platform-icon">
+                            <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+                        </div>
+                    </a>
+
+                    <a href="https://www.facebook.com/vivalanocheshop/" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
+                        <img src="images/review pics/Melissa Robins.jpg" alt="Reviewer: Melissa Robins" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <h3>Melissa Robins</h3>
+                         <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>my son and I had a fantastic time. the instructor was kind and very knowledgeable about good craft. we would go again!</p>
+                        <div class="platform-icon">
+                            <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+                        </div>
+                    </a>
+
+                    <!-- New Review 7 -->
+                    <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
+                        <div class="reviewer-initial-icon">R</div>
+                        <h3>Ryan Brasiskis</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>Very fun! Makes sushi making easy, well def take this skill home!</p>
+                        <div class="platform-icon">
+                            <i class="fas fa-star"></i> <!-- Using star for Trustpilot -->
+                        </div>
+                    </a>
+
+                    <!-- New Review 8 -->
+                    <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
+                        <div class="reviewer-initial-icon">A</div>
+                        <h3>Ariana Diaz</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>Matthew hosted a great class at Magnetic South Brewery in Greenville! He was informative but also made the class fun with joking around</p>
+                        <div class="platform-icon">
+                            <i class="fas fa-star"></i> <!-- Using star for Trustpilot -->
+                        </div>
+                    </a>
+
+                    <!-- New Review 9 -->
+                    <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
+                        <img src="images/review pics/Justin McAllister.png" alt="Reviewer: Justin McAllister" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <h3>Justin McAllister</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p>Matthew was a great sushi instructor and made for a fun time! He is very knowledgeable, high energy and funny. I highly recommend this experience!</p>
+                        <div class="platform-icon">
+                            <i class="fas fa-star"></i> <!-- Using star for Trustpilot -->
+                        </div>
+                    </a>
+                </div> <!-- End swiper-wrapper -->
+                
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div> <!-- End swiper-container -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <p><strong>Viva La Noche</strong></p>
+                <p>Phone: (843) 455-2821</p>
+                <p>Email: vivalanochebarandcatering@gmail.com</p>
+                <div class="btn-container">
+                    <a href="#" class="btn contact-btn">Send Us a Message</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-yelp"></i></a>
+            </div>
+            <p class="copyright">&copy; 2023 Viva La Noche Catering. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sushi Menu Modal -->
+    <div id="sushiMenuModal" class="menu-modal">
+        <div class="menu-content">
+            <span class="close-menu">&times;</span>
+            <div class="menu-header">
+                <h2>Viva La Noche Sushi Menu</h2>
+                <p>Fresh, handcrafted sushi made with premium ingredients</p>
+            </div>
+            
+            <div class="menu-section">
+                <h3>HAND ROLLS</h3>
+                <div class="menu-item">
+                    <div class="menu-item-name">SALMON OR SPICY SALMON</div>
+                    <div class="menu-item-desc">Salmon / Mango / Red Pepper / Arugula / Cucumber</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">TUNA OR SPICY TUNA</div>
+                    <div class="menu-item-desc">Tuna Loin / Mango / Red Pepper / Arugula / Cucumber</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">VEGGIE MANGO</div>
+                    <div class="menu-item-desc">Mango / Red Pepper / Arugula / Cucumber</div>
+                </div>
+            </div>
+            
+            <div class="menu-section">
+                <h3>NIGIRI</h3>
+                <div class="menu-item-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-name">TUNA</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-name">SALMON</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-name">EEL</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-name">EBI SHRIMP</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-name">OCTOPUS</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-name">HAMACHI YELLOWTAIL</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">TORCHED SUGAR ENCRUSTED SALMON<span class="special-note">★ on site event only</span></div>
+                </div>
+            </div>
+            
+            <div class="menu-section">
+                <h3>SPECIALTY ROLLS</h3>
+                <div class="menu-item">
+                    <div class="menu-item-name">CRUNCHY TEMPURA SHRIMP ROLL</div>
+                    <div class="menu-item-desc">Shrimp Tempura / Cucumber / Spicy Sauce / Sushi Sauce / Crunchy Onion</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">CRUNCHY RED DRAGON ROLL</div>
+                    <div class="menu-item-desc">Mango / Arugula / Cucumber / Tuna Loin / Spicy Sauce / Sushi Sauce / Tempura Crunchy</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">DRAGON ROLL</div>
+                    <div class="menu-item-desc">Eel / Cucumber / Layered Avocado / Sesame Seeds</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">RAINBOW ROLL</div>
+                    <div class="menu-item-desc">Crab Stick / Carrot / Cucumber / Tuna Loin / Salmon</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">RED ROCK TUNA EXPLOSION ROLL</div>
+                    <div class="menu-item-desc">Tuna Loin / Chopped Tuna Loin with Sriracha Sauce / Spicy Sauce / Tempura Crunchy</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">HAWAIIAN</div>
+                    <div class="menu-item-desc">Salmon / Tuna / Yellowtail / Lobster / Pineapple / Avocado</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">ALASKAN ROLL</div>
+                    <div class="menu-item-desc">Salmon / Seaweed Salad / Mango / Cucumber</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">LOBSTER ROLL</div>
+                    <div class="menu-item-desc">Lobster Salad / Cucumber / Avocado / Carrot</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">DL MANGO SHRIMP ROLL</div>
+                    <div class="menu-item-desc">Jumbo Shrimp / Arugula / Red Pepper / Mango</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">RED ROCK TEXAS CAVIAR ROLL</div>
+                    <div class="menu-item-desc">Tuna Loin / Chopped Tuna Loin with Sriracha Sauce / Texas Caviar / Spicy Sauce / Tempura Crunchy</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">BAGEL ROLL</div>
+                    <div class="menu-item-desc">Smoked Nova Salmon / Cream Cheese / Avocado / Everything Seasoning</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">TORCHED SEARED SALMON ROLL<span class="special-note">★ on site event only</span></div>
+                    <div class="menu-item-desc">Salmon / Avocado / Cucumber / Sugar Encrusted Salmon</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">DYNAMITE ROLL</div>
+                    <div class="menu-item-desc">Shrimp Tempura / Cream Cheese / Avocado / Spicy Sauce / Sushi Sauce Tempura Crunchy</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">CRUNCHY WHITE DRAGON ROLL</div>
+                    <div class="menu-item-desc">Crab Stick / Cucumber / Carrot / Crab Salad / Spicy Sauce / Tempura Crunchy</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">YELLOWTAIL ROLL</div>
+                    <div class="menu-item-desc">Yellowtail / Red Pepper / Arugula / Mango</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">SEASONED COOKED SALMON ROLL</div>
+                    <div class="menu-item-desc">Baked Salmon / Avocado / Garlic Aioli</div>
+                </div>
+            </div>
+            
+            <div class="menu-section">
+                <h3>PREMIUM ROLLS</h3>
+                <div class="menu-item">
+                    <div class="menu-item-name">CALIFORNIA ROLL</div>
+                    <div class="menu-item-desc">Crab Stick / Avocado / Cucumber / Carrot Sesame Seeds<br>Option to top with red or orange tobiko.</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">CRUNCHY CALIFORNIA ROLL</div>
+                    <div class="menu-item-desc">Crab Stick / Avocado / Cucumber / Carrot Crunchy Onion / Spicy Sauce / Sushi Sauce</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">SPICY TUNA ROLL</div>
+                    <div class="menu-item-desc">Tuna / Cucumber / Spicy Sauce / Sesame Seeds</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">SPICY SALMON ROLL</div>
+                    <div class="menu-item-desc">Salmon / Cucumber / Spicy Sauce / Sesame Seeds</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">SPICY SHRIMP ROLL</div>
+                    <div class="menu-item-desc">Shrimp / Cucumber / Spicy Sauce / Sesame Seeds</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">MANGO VEGGIE ROLL</div>
+                    <div class="menu-item-desc">Mango / Avocado / Carrot / Cucumber / Sesame Seeds</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">DL VEGGIE ROLL</div>
+                    <div class="menu-item-desc">Cooked Seasoned Tofu / Cucumber / Carrot</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">TOFU VEGGIE ROLL</div>
+                    <div class="menu-item-desc">Cooked Seasoned Tofu / Cucumber / Carrot</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">CREAM CHEESE ROLL</div>
+                    <div class="menu-item-desc">Crab Stick / Cucumber / Cream Cheese Sesame</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hibachi Menu Modal -->
+    <div id="hibachiMenuModal" class="menu-modal">
+        <div class="menu-content">
+            <span class="close-menu hibachi-close">&times;</span>
+            <div class="menu-header">
+                <h2>Private Chef Hibachi Menu</h2>
+                <p>Live interactive cooking experience with professional hibachi chefs</p>
+            </div>
+            
+            <div class="menu-section">
+                <div class="menu-item included-note">
+                    <p><span class="special-note">★</span>All orders are served with Mixed Vegetables (zucchini, Onion, yellow squash, red peppers) – Fried Rice (eggs, sesame) – Traditional House Yum-Yum Sauce, Teriyaki Sauce, and Hot Sauce.</p>
+                </div>
+                
+                <div class="hibachi-menu-grid">
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Chicken</div>
+                        <div class="hibachi-price">$50</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Vegetarian</div>
+                        <div class="hibachi-price">$40</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Shrimp</div>
+                        <div class="hibachi-price">$50</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">NY Strip</div>
+                        <div class="hibachi-price">$55</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Ribeye</div>
+                        <div class="hibachi-price">$60</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Filet Mignon</div>
+                        <div class="hibachi-price">$65</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Mix Any 2</div>
+                        <div class="hibachi-price">$72</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Mix Any 3</div>
+                        <div class="hibachi-price">$80</div>
+                    </div>
+                </div>
+                
+                <div class="menu-item per-person">
+                    <p>Prices are per person</p>
+                </div>
+                
+                <div class="menu-item kids-meals">
+                    <p>Kids Meals are $15 less on single-item orders. Ages 11 or younger.</p>
+                </div>
+            </div>
+            
+            <div class="menu-section">
+                <h3>ADD-ONS</h3>
+                <div class="hibachi-menu-grid">
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Scallops</div>
+                        <div class="hibachi-price">+$7</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Salmon</div>
+                        <div class="hibachi-price">+$6</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Lo-Mein Noodles<span class="addons-note">* $5 if added for entire party</span></div>
+                        <div class="hibachi-price">+$8</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Lobster Tail</div>
+                        <div class="hibachi-price">+$20</div>
+                    </div>
+                    <div class="hibachi-item">
+                        <div class="hibachi-name">Tofu</div>
+                        <div class="hibachi-price">+$10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-content">
+            <span class="close-contact">&times;</span>
+            <div class="menu-header">
+                <h2>Send Us a Message</h2>
+                <p>We'd love to hear about your event and how we can help make it special</p>
+            </div>
+            
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xblgpgev" method="POST">
+                <div id="formSuccessMessage" class="form-success-message">
+                    <p>Thank you for your message! We will get back to you soon.</p>
+                </div>
+                <div id="formErrorMessage" class="form-error-message">
+                    <p>There was an error sending your message. Please try again or contact us directly.</p>
+                </div>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="event-type">Event Type</label>
+                    <select class="form-control" id="event-type" name="event-type">
+                        <option value="">Select an option</option>
+                        <option value="workshop">Sushi Workshop</option>
+                        <option value="sushi-catering">Sushi Catering</option>
+                        <option value="hibachi">On-Site Hibachi</option>
+                        <option value="custom">Custom Event</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Replace the existing loading screen with logo-only version -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo-container">
+            <img src="images/IMG_6382.png" alt="Viva La Noche Logo" class="loading-logo-main">
+        </div>
+    </div>
+
+    <script>
+        // Optimize loading by deferring initialization and reducing impact
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize only essential features first
+            initializeNavigation();
+            
+            // Defer other initializations
+            setTimeout(function() {
+                initializeModals();
+                initializeForm();
+                
+                // Initialize animations last and with a longer delay
+                setTimeout(function() {
+                    initializeAnimations();
+                }, 1000);
+            }, 500);
+            
+            // Hide loading screen after content is ready
+            window.addEventListener('load', function() {
+                const loadingScreen = document.getElementById('loadingScreen');
+                setTimeout(() => {
+                    loadingScreen.style.opacity = '0';
+                    loadingScreen.style.visibility = 'hidden';
+                }, 800);
+            });
+        });
+        
+        // Initialize navigation functionality
+        function initializeNavigation() {
+            // Smooth scrolling for anchor links with debouncing
+            let scrollTimeout;
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (scrollTimeout) return; // Prevent rapid multiple clicks
+                    
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        
+                        scrollTimeout = setTimeout(() => {
+                            scrollTimeout = null;
+                        }, 800);
+                    }
+                    
+                    // Close mobile menu if open after clicking a link
+                    if (window.innerWidth <= 768) {
+                        const navLinks = document.querySelector('.nav-links');
+                        const mobileMenu = document.querySelector('.mobile-menu');
+                        if (navLinks.classList.contains('active')) {
+                            navLinks.classList.remove('active');
+                            mobileMenu.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    }
+                });
+            });
+            
+            // Mobile menu toggle
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenu && navLinks) {
+                mobileMenu.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    // Add this line to prevent body scroll when menu is open
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+            }
+            
+            // Change nav background on scroll with throttling
+            let lastScrollTop = 0;
+            let scrollThrottleTimeout;
+            window.addEventListener('scroll', function() {
+                if (scrollThrottleTimeout) return;
+                
+                scrollThrottleTimeout = setTimeout(() => {
+                    const nav = document.querySelector('nav');
+                    const currentScrollTop = window.scrollY;
+                    
+                    // Only update if we've scrolled more than 20px
+                    if (Math.abs(lastScrollTop - currentScrollTop) > 20) {
+                        if (currentScrollTop > 100) {
+                            nav.style.background = 'rgba(10, 10, 10, 0.95)';
+                            nav.style.padding = '10px 0';
+                        } else {
+                            nav.style.background = 'rgba(10, 10, 10, 0.9)';
+                            nav.style.padding = '15px 0';
+                        }
+                        lastScrollTop = currentScrollTop;
+                    }
+                    
+                    scrollThrottleTimeout = null;
+                }, 100);
+            }, { passive: true }); // Add passive flag for better performance
+        }
+        
+        // Initialize animations with optimization
+        function initializeAnimations() {
+            // Use IntersectionObserver for scroll animations to avoid layout thrashing
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, { 
+                threshold: 0.15,
+                rootMargin: '0px 0px 100px 0px' // Load slightly before they come into view
+            });
+            
+            // Only observe elements that are above the fold or close to it
+            document.querySelectorAll('.about-content, .reason-card, .service-card:nth-child(-n+2), .contact-details').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Optimize the Scroll Reveal Animation using the same IntersectionObserver pattern
+            const scrollRevealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        scrollRevealObserver.unobserve(entry.target); // Stop observing once activated
+                    }
+                });
+            }, { 
+                threshold: 0.15,
+                rootMargin: '0px 0px 50px 0px'
+            });
+            
+            document.querySelectorAll('.scroll-reveal').forEach(el => {
+                scrollRevealObserver.observe(el);
+            });
+        }
+        
+        // Disable particles.js to improve performance
+        function loadParticlesJS() {
+            // Particles disabled for performance
+            console.log('Particles.js disabled for performance improvement');
+        }
+        
+        // Initialize modal dialogs
+        function initializeModals() {
+            // Sushi Menu Modal
+            const menuModal = document.getElementById('sushiMenuModal');
+            const menuBtn = document.querySelector('.menu-btn');
+            const closeMenu = document.querySelector('.close-menu');
+            
+            if (menuBtn && menuModal && closeMenu) {
+                menuBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    menuModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                });
+                
+                closeMenu.addEventListener('click', function() {
+                    menuModal.style.display = 'none';
+                    document.body.style.overflow = '';
+                });
+                
+                window.addEventListener('click', function(e) {
+                    if (e.target == menuModal) {
+                        menuModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+            
+            // Hibachi Menu Modal
+            const hibachiModal = document.getElementById('hibachiMenuModal');
+            const hibachiBtn = document.querySelector('.hibachi-btn');
+            const closeHibachi = document.querySelector('.hibachi-close');
+            
+            if (hibachiBtn && hibachiModal && closeHibachi) {
+                hibachiBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    hibachiModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                });
+                
+                closeHibachi.addEventListener('click', function() {
+                    hibachiModal.style.display = 'none';
+                    document.body.style.overflow = '';
+                });
+                
+                window.addEventListener('click', function(e) {
+                    if (e.target == hibachiModal) {
+                        hibachiModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+            
+            // Contact Form Modal
+            const contactModal = document.getElementById('contactModal');
+            const contactBtns = document.querySelectorAll('.contact-btn');
+            const closeContact = document.querySelector('.close-contact');
+            
+            if (contactBtns.length && contactModal && closeContact) {
+                contactBtns.forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        contactModal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+                
+                closeContact.addEventListener('click', function() {
+                    contactModal.style.display = 'none';
+                    document.body.style.overflow = '';
+                });
+                
+                window.addEventListener('click', function(e) {
+                    if (e.target == contactModal) {
+                        contactModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        }
+        
+        // Initialize form submission
+        function initializeForm() {
+            // Handle form submission with AJAX
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Prevent the form from submitting normally
+                    
+                    const form = this;
+                    const submitButton = form.querySelector('.submit-btn');
+                    const successMessage = document.getElementById('formSuccessMessage');
+                    const errorMessage = document.getElementById('formErrorMessage');
+                    const formData = new FormData(form);
+                    
+                    // Hide any existing messages
+                    successMessage.style.display = 'none';
+                    errorMessage.style.display = 'none';
+                    
+                    // Change button text while submitting
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
+                    
+                    // Submit the form using fetch
+                    fetch(form.action, {
+                        method: form.method,
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            return response.json();
+                        }
+                        throw new Error('Network response was not ok.');
+                    })
+                    .then(data => {
+                        // Show success message
+                        successMessage.style.display = 'block';
+                        form.reset(); // Reset the form
+                        
+                        // Hide the form after 3 seconds
+                        setTimeout(function() {
+                            document.getElementById('contactModal').style.display = 'none';
+                            document.body.style.overflow = ''; // Restore scrolling
+                        }, 3000);
+                    })
+                    .catch(error => {
+                        // Show error message
+                        errorMessage.style.display = 'block';
+                        console.error('Error:', error);
+                    })
+                    .finally(() => {
+                        // Reset button
+                        submitButton.textContent = 'Send Message';
+                        submitButton.disabled = false;
+                    });
+                });
+            }
+        }
+        
+        // Conditionally load particles.js
+        function loadParticlesJS() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": {
+                            "value": 20, // Reduced number of particles
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#e60000"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.1, // Reduced opacity
+                            "random": true,
+                            "anim": {
+                                "enable": true,
+                                "speed": 0.5, // Slower animation
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true,
+                            "anim": {
+                                "enable": true,
+                                "speed": 1, // Slower size animation
+                                "size_min": 0.3,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#e60000",
+                            "opacity": 0.1,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 0.5, // Slower movement
+                            "direction": "none",
+                            "random": true,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 0.3
+                                }
+                            },
+                            "push": {
+                                "particles_nb": 2 // Reduced number of particles added on click
+                            }
+                        }
+                    },
+                    "retina_detect": false // Disable retina detection for performance
+                });
+            }
+        }
+        
+        // Load particles only after page load
+        window.addEventListener('load', function() {
+            setTimeout(loadParticlesJS, 1000); // Delay particles load
+        });
+
+        /* Add debugging for image loading */
+        window.addEventListener('load', function() {
+            console.log('Attempting to load brewery images...');
+            document.querySelectorAll('.brewery-logo img').forEach(img => {
+                console.log('Image path:', img.src, img.complete ? 'loaded' : 'failed');
+            });
+        });
+
+        /* Fix for too many error messages */
+        window.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG' && e.target.src.includes('brewery')) {
+                // Prevent excessive console errors for brewery images
+                e.preventDefault();
+                e.stopPropagation();
+                return true;
+            }
+        }, true);
+    </script>
+    
+    <!-- Optimize image loading with lazy loading -->
+    <script>
+        // Detect if we can use IntersectionObserver for native lazy loading
+        function supportsIntersectionObserver() {
+            return 'IntersectionObserver' in window;
+        }
+        
+        // Set up image lazy loading
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add native lazy loading attribute first for browser support
+            document.querySelectorAll('img').forEach(img => {
+                if (!img.hasAttribute('loading')) {
+                    img.setAttribute('loading', 'lazy');
+                }
+            });
+            
+            // For browsers that support IntersectionObserver, add JS lazy loading as well
+            if (supportsIntersectionObserver()) {
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.removeAttribute('data-src');
+                            }
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                }, { rootMargin: '50px 0px' });
+                
+                // Convert src to data-src for images below the fold
+                document.querySelectorAll('img:not([src*="IMG_6382"])').forEach((img, index) => {
+                    if (index > 5) { // Keep the first few images loaded normally
+                        const src = img.src;
+                        img.dataset.src = src;
+                        img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E";
+                        imageObserver.observe(img);
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <!-- Remove particles.js reference -->
+    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- SwiperJS JS -->
+
+    <!-- Swiper Initialization -->
+    <script>
+        var swiper = new Swiper('.testimonials-swiper', { // Use the specific class
+          slidesPerView: 1, // Show 1 slide by default on small screens
+          spaceBetween: 30, // Space between slides
+          loop: true, // Enable continuous loop mode
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            },
+            // when window width is >= 1024px
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40
+            }
+          }
+        });
+    </script>
+
+    <!-- Remove particles.js reference -->
+    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+
+</body>
+</html>
