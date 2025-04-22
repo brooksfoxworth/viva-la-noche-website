@@ -39,6 +39,7 @@
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
+            padding-top: 5rem; /* ≈80 px – tweak if needed */
         }
 
         .container {
@@ -2701,6 +2702,29 @@
           margin-bottom: 1rem;   /* Space below the icon */
           border: 2px solid #eee; /* Optional border */
         }
+
+        /* --- Mobile nav & hero overlap fix --- */
+        @media (max-width: 767px) {
+            /* Give page content room so fixed nav doesn't cover hero */
+            .hero {
+                padding-top: 5.5rem; /* ≈88 px – tweak if needed */
+            }
+            /* Slimmer mobile navigation bar */
+            nav {
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+            .logo img {
+                max-height: 40px;
+                height: 40px;
+                width: auto;
+            }
+            /* Slightly smaller link text in collapsed mobile nav */
+            .nav-links a {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -2835,7 +2859,7 @@
                     <div class="service-content">
                         <h3>Host Your Own</h3>
                         <p>Looking for a unique team-building activity, birthday celebration, or private gathering? We offer customized private sushi workshops tailored to your needs, venue, and group size.</p>
-                        <a href="#" class="btn">Request Info</a>
+                        <a href="#" class="btn contact-btn">Request Info</a>
                     </div>
                 </div>
             </div>
@@ -2965,7 +2989,7 @@
                 <div class="swiper-wrapper">
                     <!-- Testimonial Cards become Swiper Slides -->
                     <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
-                        <img src="images/review pics/Colin Stringer.png" alt="Reviewer: Colin Stringer" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <img src="images/review pics/Colin Stringer.png" alt="Reviewer: Colin Stringer" class="reviewer-photo" width="50" height="50" loading="lazy" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
                         <h3>Colin Stringer</h3>
                         <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -2977,7 +3001,7 @@
                     </a>
 
                     <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
-                        <img src="images/review pics/Katilyn Lemmons.png" alt="Reviewer: Katilyn Lemmons" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <img src="images/review pics/Katilyn Lemmons.png" alt="Reviewer: Katilyn Lemmons" class="reviewer-photo" width="50" height="50" loading="lazy" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
                         <h3>Katilyn Lemmons</h3>
                         <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -3001,7 +3025,7 @@
                     </a>
 
                     <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
-                        <img src="images/review pics/Cyndie Sanders Rhodes.png" alt="Reviewer: Cyndie Sanders Rhodes" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <img src="images/review pics/Cyndie Sanders Rhodes.png" alt="Reviewer: Cyndie Sanders Rhodes" class="reviewer-photo" width="50" height="50" loading="lazy" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
                         <h3>Cyndie Sanders Rhodes</h3>
                          <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -3013,7 +3037,7 @@
                     </a>
 
                     <a href="https://www.facebook.com/vivalanocheshop/" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
-                        <img src="images/review pics/Gissel Ramirez.jpg" alt="Reviewer: Gissel Ramirez" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <img src="images/review pics/Gissel Ramirez.jpg" alt="Reviewer: Gissel Ramirez" class="reviewer-photo" width="50" height="50" loading="lazy" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
                         <h3>Gissel Ramirez</h3>
                          <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -3025,7 +3049,7 @@
                     </a>
 
                     <a href="https://www.facebook.com/vivalanocheshop/" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
-                        <img src="images/review pics/Melissa Robins.jpg" alt="Reviewer: Melissa Robins" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <img src="images/review pics/Melissa Robins.jpg" alt="Reviewer: Melissa Robins" class="reviewer-photo" width="50" height="50" loading="lazy" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
                         <h3>Melissa Robins</h3>
                          <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -3064,7 +3088,7 @@
 
                     <!-- New Review 9 -->
                     <a href="https://www.trustpilot.com/review/vivalanochecatering.com" target="_blank" rel="noopener noreferrer" class="testimonial-card swiper-slide">
-                        <img src="images/review pics/Justin McAllister.png" alt="Reviewer: Justin McAllister" class="reviewer-photo" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
+                        <img src="images/review pics/Justin McAllister.png" alt="Reviewer: Justin McAllister" class="reviewer-photo" width="50" height="50" loading="lazy" onerror="this.onerror=null; this.src='images/review pics/avatar.png';">
                         <h3>Justin McAllister</h3>
                         <div class="rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -3104,13 +3128,8 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-yelp"></i></a>
-            </div>
-            <p class="copyright">&copy; 2023 Viva La Noche Catering. All Rights Reserved.</p>
+        
+            <p class="copyright">&copy; 2024 Viva La Noche Catering. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -3873,31 +3892,26 @@
 
     <!-- Swiper Initialization -->
     <script>
-        var swiper = new Swiper('.testimonials-swiper', { // Use the specific class
-          slidesPerView: 1, // Show 1 slide by default on small screens
-          spaceBetween: 30, // Space between slides
-          loop: true, // Enable continuous loop mode
+      document.addEventListener('DOMContentLoaded', function() {
+        var swiper = new Swiper('.testimonials-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
           pagination: {
             el: '.swiper-pagination',
-            clickable: true,
+            clickable: true
           },
           navigation: {
             nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            prevEl: '.swiper-button-prev'
           },
           breakpoints: {
-            // when window width is >= 768px
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30
-            },
-            // when window width is >= 1024px
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 40
-            }
+            768: { slidesPerView: 2, spaceBetween: 30 },
+            1024: { slidesPerView: 3, spaceBetween: 40 }
           }
         });
+        console.log('Swiper initialized.');
+      });
     </script>
 
     <!-- Remove particles.js reference -->
