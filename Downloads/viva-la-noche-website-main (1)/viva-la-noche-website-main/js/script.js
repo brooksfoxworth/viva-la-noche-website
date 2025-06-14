@@ -155,24 +155,63 @@ function initializeLazyLoading() {
 
 // Initialize the Swiper carousel for testimonials
 function initializeSwiper() {
-    var swiper = new Swiper('.testimonials-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            768: { slidesPerView: 2, spaceBetween: 30 },
-            1024: { slidesPerView: 3, spaceBetween: 40 },
-        },
-    });
-    console.log('Swiper initialized.');
+    // Testimonials Swiper (existing)
+    if (document.querySelector('.testimonials-swiper')) {
+        var swiper = new Swiper('.testimonials-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1024: { slidesPerView: 3, spaceBetween: 40 },
+            },
+        });
+    }
+    // Brewery Logos Swiper (mobile only)
+    if (window.innerWidth <= 700 && document.querySelector('.brewery-logos-swiper')) {
+        var brewerySwiper = new Swiper('.brewery-logos-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 16,
+            loop: true,
+            pagination: {
+                el: '.brewery-logos-swiper .swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
+    // Catering Swiper (mobile only)
+    if (window.innerWidth <= 768 && document.querySelector('.catering-swiper')) {
+        var cateringSwiper = new Swiper('.catering-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: false,
+            pagination: {
+                el: '.catering-swiper .swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
+    // Workshops Swiper (mobile only)
+    if (window.innerWidth <= 768 && document.querySelector('.workshops-swiper')) {
+        var workshopsSwiper = new Swiper('.workshops-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: false,
+            pagination: {
+                el: '.workshops-swiper .swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
+    console.log('Swipers initialized.');
 }
 
 

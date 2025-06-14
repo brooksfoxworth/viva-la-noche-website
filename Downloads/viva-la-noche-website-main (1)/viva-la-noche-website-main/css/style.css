@@ -596,93 +596,84 @@ nav {
         radial-gradient(circle at 50% 50%, rgba(230, 0, 0, 0.02) 0%, transparent 40%);
 }
 
-.brewery-partners-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 2px);
-    background-size: 30px 30px;
-    background-position: 0 0;
-    animation: brewBubbles 120s linear infinite;
-    opacity: 0.5;
-    pointer-events: none;
-}
-
 .brewery-partners-section .section-intro {
     max-width: 800px;
     margin: 0 auto 40px;
     text-align: center;
 }
 
-.brewery-collage {
-    position: relative;
+.brewery-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 36px 28px;
+    justify-items: center;
+    align-items: center;
     width: 100%;
-    max-width: 2200px;
-    height: 1300px;
-    margin: 60px auto;
-    padding: 0 20px;
-    overflow: visible;
+    max-width: 1400px;
+    margin: 60px auto 0 auto;
+    padding: 0 10px;
 }
 
 .brewery-logo {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-    overflow: visible;
-    z-index: 1;
-    --rotation: 0deg;
-    animation: floatAnimation 6s infinite ease-in-out;
-    animation-delay: calc(var(--index) * 0.3s);
-    width: 280px;
-    height: 280px;
     background: transparent;
     border-radius: 8px;
     box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    transition: transform 0.3s;
 }
 
 .brewery-logo img {
-    max-width: 85%;
-    max-height: 85%;
+    max-width: 95%;
+    max-height: 95%;
     object-fit: contain;
-    transition: all 0.5s ease;
     filter: brightness(1.1) contrast(1.1);
+    transition: transform 0.3s;
 }
 
 .brewery-logo:hover {
-    transform: translateY(-10px) scale(1.05) rotate(0deg) !important;
-    z-index: 100 !important;
-    animation-play-state: paused;
+    transform: scale(1.12);
+    z-index: 2;
 }
-/* Positions for all 24 logos */
-.brewery-logo:nth-child(1)  { top: 20px;  left: 2%;    transform: rotate(-3deg); z-index: 5;  --rotation: -3deg; --index: 1; }
-.brewery-logo:nth-child(2)  { top: 15px;  left: 18%;   transform: rotate(2deg);  z-index: 4;  --rotation: 2deg;  --index: 2; }
-.brewery-logo:nth-child(3)  { top: 25px;  left: 34%;   transform: rotate(-2deg); z-index: 3;  --rotation: -2deg; --index: 3; }
-.brewery-logo:nth-child(4)  { top: 18px;  left: 50%;   transform: rotate(1deg);  z-index: 2;  --rotation: 1deg;  --index: 4; }
-.brewery-logo:nth-child(5)  { top: 28px;  left: 66%;   transform: rotate(-1deg); z-index: 3;  --rotation: -1deg; --index: 5; }
-.brewery-logo:nth-child(6)  { top: 20px;  left: 82%;   transform: rotate(3deg);  z-index: 2;  --rotation: 3deg;  --index: 6; }
-.brewery-logo:nth-child(7)  { top: 330px; left: 2%;    transform: rotate(-2deg); z-index: 2;  --rotation: -2deg; --index: 7; }
-.brewery-logo:nth-child(8)  { top: 320px; left: 18%;   transform: rotate(2deg);  z-index: 3;  --rotation: 2deg;  --index: 8; }
-.brewery-logo:nth-child(9)  { top: 340px; left: 34%;   transform: rotate(-1deg); z-index: 4;  --rotation: -1deg; --index: 9; }
-.brewery-logo:nth-child(10) { top: 330px; left: 50%;   transform: rotate(1deg);  z-index: 5;  --rotation: 1deg;  --index: 10; }
-.brewery-logo:nth-child(11) { top: 350px; left: 66%;   transform: rotate(-2deg); z-index: 3;  --rotation: -2deg; --index: 11; }
-.brewery-logo:nth-child(12) { top: 335px; left: 82%;   transform: rotate(2deg);  z-index: 2;  --rotation: 2deg;  --index: 12; }
-.brewery-logo:nth-child(13) { top: 640px; left: 2%;    transform: rotate(-1deg); z-index: 4;  --rotation: -1deg; --index: 13; }
-.brewery-logo:nth-child(14) { top: 650px; left: 18%;   transform: rotate(1deg);  z-index: 3;  --rotation: 1deg;  --index: 14; }
-.brewery-logo:nth-child(15) { top: 660px; left: 34%;   transform: rotate(-2deg); z-index: 2;  --rotation: -2deg; --index: 15; }
-.brewery-logo:nth-child(16) { top: 645px; left: 50%;   transform: rotate(3deg);  z-index: 4;  --rotation: 3deg;  --index: 16; }
-.brewery-logo:nth-child(17) { top: 655px; left: 66%;   transform: rotate(-1deg); z-index: 3;  --rotation: -1deg; --index: 17; }
-.brewery-logo:nth-child(18) { top: 640px; left: 82%;   transform: rotate(2deg);  z-index: 2;  --rotation: 2deg;  --index: 18; }
-.brewery-logo:nth-child(19) { top: 950px; left: 2%;    transform: rotate(-3deg); z-index: 3;  --rotation: -3deg; --index: 19; }
-.brewery-logo:nth-child(20) { top: 960px; left: 18%;   transform: rotate(1deg);  z-index: 4;  --rotation: 1deg;  --index: 20; }
-.brewery-logo:nth-child(21) { top: 970px; left: 34%;   transform: rotate(-2deg); z-index: 5;  --rotation: -2deg; --index: 21; }
-.brewery-logo:nth-child(22) { top: 955px; left: 50%;   transform: rotate(2deg);  z-index: 3;  --rotation: 2deg;  --index: 22; }
-.brewery-logo:nth-child(23) { top: 965px; left: 66%;   transform: rotate(-1deg); z-index: 4;  --rotation: -1deg; --index: 23; }
-.brewery-logo:nth-child(24) { top: 950px; left: 82%;   transform: rotate(3deg);  z-index: 2;  --rotation: 3deg;  --index: 24; }
+
+@media (max-width: 1200px) {
+    .brewery-logos-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px 12px;
+        max-width: 900px;
+    }
+    .brewery-logo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 800px) {
+    .brewery-logos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px 8px;
+        max-width: 600px;
+    }
+    .brewery-logo {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 500px) {
+    .brewery-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 4px;
+        max-width: 320px;
+    }
+    .brewery-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
 
 /* --- Testimonials Section --- */
 #testimonials {
@@ -709,6 +700,11 @@ nav {
     padding: 0 20px 50px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
 }
 
 .testimonial-card {
@@ -720,11 +716,17 @@ nav {
     border-top: 3px solid rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
     text-decoration: none;
     color: var(--light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 280px;
-    height: auto;
+    min-height: 560px;
+    max-height: 560px;
+    height: 560px;
+    overflow: hidden;
+    word-break: break-word;
+    position: relative;
 }
 
 .testimonial-card:hover {
@@ -756,26 +758,26 @@ nav {
     font-size: 1rem;
     color: var(--light-accent);
     flex-grow: 1;
-    margin-bottom: 20px;
+    overflow: visible;
+    margin-bottom: 0;
     line-height: 1.7;
     text-align: left;
 }
 
 .platform-icon {
-    margin-top: auto;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
     line-height: 0;
-    text-align: right;
-}
-
-.platform-icon i {
-    font-size: 1.4rem;
-    color: var(--primary);
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.testimonial-card:hover .platform-icon i {
-    opacity: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 40px;
+    margin-top: 0;
+    padding-bottom: 0;
 }
 
 .testimonials-swiper .swiper-button-next,
@@ -1290,15 +1292,63 @@ textarea.form-control {
     .hibachi-menu-grid { grid-template-columns: 1fr; }
 }
 
-@media (min-width: 768px) {
-    .hibachi-menu-grid { grid-template-columns: repeat(2, 1fr); }
-    .addons-note { display: inline; }
+/* Swiper for Catering & Workshops (Mobile Only) */
+@media (max-width: 768px) {
+  .catering-swiper, .workshops-swiper {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .catering-grid, .workshops-grid {
+    display: none !important;
+  }
+  .catering-swiper .swiper-slide, .workshops-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: auto;
+  }
+  .catering-swiper .service-card, .workshops-swiper .service-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .catering-swiper .swiper-pagination, .workshops-swiper .swiper-pagination {
+    margin-top: 10px;
+    position: static;
+  }
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background: rgba(230,0,0,0.3);
+    opacity: 1;
+    margin: 0 6px !important;
+    border: 2px solid #e60000;
+    transition: background 0.3s, border 0.3s;
+  }
+  .swiper-pagination-bullet-active {
+    background: #e60000;
+    border-color: #fff;
+    box-shadow: 0 0 0 3px rgba(230,0,0,0.15);
+  }
+  .swiper-swipe-hint {
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+    display: block;
+    animation: swipeHintAnim 1.8s infinite;
+  }
+  @keyframes swipeHintAnim {
+    0%, 100% { opacity: 0.85; transform: translateX(0); }
+    50% { opacity: 1; transform: translateX(10px); }
+  }
 }
-
-@media (max-width: 480px) {
-    h2 { font-size: 1.8rem; }
-    .hero h1 { font-size: 2rem; }
-    .hero p { font-size: 1rem; }
-    .btn { padding: 14px 18px; font-size: 14px; }
-    .brewery-logo { width: 110px; height: 110px; }
+@media (min-width: 769px) {
+  .catering-swiper, .workshops-swiper {
+    display: none !important;
+  }
+  .catering-grid, .workshops-grid {
+    display: grid;
+  }
 }
